@@ -1,7 +1,7 @@
-﻿string[] GetArrayStringConsole (string inConsoleSymbol)
+﻿string[] GetArrayStringConsole (string consoleSymbol)
 {
-    string[] arraySymbol = new string[inConsoleSymbol.Length];
-    arraySymbol = inConsoleSymbol.Split(' ');
+    string[] arraySymbol = new string[consoleSymbol.Length];
+    arraySymbol = consoleSymbol.Split(' ');
     return arraySymbol;
 }
 
@@ -17,7 +17,8 @@ string[] GetArrayThreeSymbol (string[] array)
         }
     }
     string[] arrayThreeSymbol = new string[count];
-    for (int i = 0, j = 0; i < array.Length; i++)
+    int j = 0;
+    for (int i = 0; i < array.Length; i++)
     {
         string symbol = array[i];
         if (symbol.Length <= 3)
@@ -49,8 +50,7 @@ Console.InputEncoding = System.Text.Encoding.Unicode;
 Console.Clear();
 
 Console.Write("Введите набор символов через пробел: ");
-string inStringSymbol = Console.ReadLine();
-string[] arraySymbol = GetArrayStringConsole(inStringSymbol);
+string[] arraySymbol = GetArrayStringConsole(Console.ReadLine()!);
 
 string[] arrayThreeSymbol = GetArrayThreeSymbol(arraySymbol);
 
