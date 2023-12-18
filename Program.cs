@@ -51,7 +51,6 @@ Console.Clear();
 
 Console.Write("Введите набор символов через пробел: ");
 string[] arraySymbol = GetArrayStringConsole(Console.ReadLine()!);
-
 string[] arrayThreeSymbol = GetArrayThreeSymbol(arraySymbol);
 
 Console.Clear();
